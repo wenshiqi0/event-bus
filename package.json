@@ -1,0 +1,22 @@
+{
+  "name": "wsw-event-bus",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Winsky Wen",
+  "license": "MIT",
+  "scripts": {
+    "build:lib": "tsc -p config/ts/tsconfig.lib.json",
+    "build:esnext": "tsc -p config/ts/tsconfig.esnext.json",
+    "build:dist": "rollup -c rollup.config.js",
+    "build": "npm run clear && npm run build:lib && npm run build:esnext && npm run build:dist",
+    "watch:lib": "tsc -p config/ts/tsconfig.lib.json -w",
+    "watch": "rollup -c rollup.config.js -w",
+    "clear": "rm -rf ./es && rm -rf ./lib && rm -rf ./dist"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.2.1",
+    "rollup": "^2.53.1",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5"
+  }
+}
