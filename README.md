@@ -1,1 +1,1 @@
-simple event and vent bus
+simple event and event bus
