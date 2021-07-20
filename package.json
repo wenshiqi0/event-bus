@@ -1,7 +1,8 @@
 {
   "name": "wsw-event-bus",
-  "version": "0.0.1",
-  "main": "index.js",
+  "version": "0.0.2",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "author": "Winsky Wen",
   "license": "MIT",
   "scripts": {

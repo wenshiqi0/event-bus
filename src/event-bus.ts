@@ -9,7 +9,6 @@ export namespace events {
   export function emitEvent<T>(id: EventId, params?: T) {
     const emitter = eventMap.get(id) || new EventEmitter<T | undefined>();
     emitter.emit(params);
-    console.info(id);
   }
 
   export function addEventListener<T>(id: EventId, callback: (p: T) => void): Disposable {
